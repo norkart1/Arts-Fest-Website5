@@ -1,4 +1,45 @@
 
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+@font-face {
+  font-family: myFirstFont;
+  src: url(fonts/myfont.ttf);
+}
+
+
+
+@media only screen and (min-width: 1080px) {
+  .framer-wbnr7r {
+    margin-left: 60px;
+  }
+}
+
+.timecount{
+  font-size: 800%;
+}
+
+.countshape{
+  width: 70%;
+  
+}
+
+@media screen and (max-width: 480px) {
+  .framer-wbnr7r {
+    margin-left: 0;
+  }
+  .timecount {
+    font-size: 40px;
+  }
+  .countshape{
+    width: 85%;
+  }
+}
+
 #animate1{
     position: absolute;
     animation: moveDown 2s linear infinite; 
@@ -9,7 +50,7 @@
         transform: translateY(0);
     }
     50% {
-        transform: translateY(-10px); /* Adjust the distance and direction */
+        transform: translateY(-5px); /* Adjust the distance and direction */
     }
     100% {
         transform: translateY(0);
@@ -25,7 +66,7 @@
       transform: translateY(0);
   }
   50% {
-      transform: translateY(10px); /* Adjust the distance and direction */
+      transform: translateY(5px); /* Adjust the distance and direction */
   }
   100% {
       transform: translateY(0);
@@ -3129,7 +3170,7 @@
         overflow: visible;
         position: relative;
         white-space: pre-wrap;
-        width: 411px;
+        width: 500px;
         word-break: break-word;
         word-wrap: break-word
       }
@@ -3212,6 +3253,7 @@
         min-height: 800px;
         overflow: visible;
         padding: 100px;
+        padding-top: 50px;
         position: relative;
         width: 100%
       }
