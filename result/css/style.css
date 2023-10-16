@@ -41,9 +41,13 @@
   .navbara{
     display: none;
   }
+  
 }
 
 
+.mhead{
+  display: none;
+}
 
 .feci .row1{
   
@@ -54,6 +58,9 @@
 @media(max-width: 700px) {
   .feci .row1{
       flex-direction: column;
+  }
+  .mhead{
+    display: block;
   }
 }
 .feci .feci-col1{
