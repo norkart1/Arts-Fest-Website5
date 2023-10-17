@@ -3592,6 +3592,7 @@ html {
         justify-content: center;
         overflow: hidden;
         padding: 100px;
+        padding-top: 50px;
         position: relative;
         width: 100%
       }
