@@ -17,6 +17,7 @@ html {
   .framer-wbnr7r {
     margin-left: 60px;
   }
+  
 }
 
 .timecount{
@@ -28,6 +29,13 @@ html {
   
 }
 
+
+.sufaid1{
+  border-radius: 20px;
+  
+  padding: 9%;
+  
+}
 @media screen and (max-width: 480px) {
   .framer-wbnr7r {
     margin-left: 0;
@@ -37,6 +45,11 @@ html {
   }
   .countshape{
     width: 85%;
+  }
+  .sufaid1{
+   
+    height: 200px;
+    
   }
 }
 
