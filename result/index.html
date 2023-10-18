@@ -64,6 +64,99 @@
   margin-bottom: 12px;
   text-align: center;
 }
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: scroll;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup {
+  margin: 70px auto;
+  padding: 20px;
+  background: #fff;
+  overflow: auto;
+  border-radius: 20px;
+  width: 80%;
+  position: relative;
+  transition: all 5s ease-in-out;
+}
+
+.popup h2 {
+  margin-top: 0;
+  color: #333;
+  font-family: Tahoma, Arial, sans-serif;
+}
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+.popup .close:hover {
+  color: #06D85F;
+}
+.popup .content {
+  max-height: 30%;
+  overflow: auto;
+}
+
+@media screen and (max-width: 700px){
+  .box{
+    width: 90%;
+  }
+  .popup{
+    width: 90%;
+  }
+}
+
+
+.row{
+    margin-top: 5%;
+    display: flex;
+    overflow: hidden; 
+    justify-content: space-between;
+}
+.course-col{
+    flex-basis: 32%;
+    background:#fff3f3;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    transition: 1s;
+}
+h3{
+    text-align: center;
+    font-weight: 600;
+    margin: 10px 0px;
+}
+.course-col:hover{
+    box-shadow: 0 0 20px 0 rgba(0,0,0,0.2 );
+}
+@media(max-width: 700px) {
+    .row{
+        flex-direction: column;
+    }
+}
+.col-sm{
+  overflow-x: hidden;
+                overflow-y: auto;
+}
     </style>
   </head>
   <body>
@@ -80,30 +173,9 @@
 					<h6 style="color: black;"><strong><i>LIVE RESULTS</i></strong></h6>
           <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search" title="Type in a name">
 	        <ul class="list-unstyled components mb-5" id="myUL">
-	          <li><a href="https://hello.com" style="margin-right: 8px;">Adil thangal</a></li>
+	          <li><a href="#azans" style="margin-right: 8px;">Adil thangal</a></li>
             <li><a href="https://hello.com" style="margin-right: 8px;">Hello</a></li>
-            <li><a href="https://hello.com" style="margin-right: 8px;">Hello</a></li>
-            <li><a href="https://hello.com" style="margin-right: 8px;">Hello</a></li>
-            <li><a href="https://hello.com" style="margin-right: 8px;">Hello</a></li>
-            <li><a href="https://hello.com" style="margin-right: 8px;">Hello</a></li>
-            <li><a href="https://hello.com" style="margin-right: 8px;">Hello</a></li>
-            <li><a href="https://hello.com" style="margin-right: 8px;">Hello</a></li>
-            <li><a href="https://hello.com" style="margin-right: 8px;">Hello</a></li>
-            <li><a href="https://hello.com" style="margin-right: 8px;">Hello</a></li>
-            <li><a href="https://hello.com" style="margin-right: 8px;">Hello</a></li>
-            <li><a href="https://hello.com" style="margin-right: 8px;">Hello</a></li>
-            <li><a href="https://hello.com" style="margin-right: 8px;">Hello</a></li>
-            <li><a href="https://hello.com" style="margin-right: 8px;">Hello</a></li>
-            <li><a href="https://hello.com" style="margin-right: 8px;">Motta</a></li>
-            <li><a href="https://hello.com" style="margin-right: 8px;">Kannada</a></li>
-            <li><a href="https://hello.com" style="margin-right: 8px;">Kannada</a></li>
-            <li><a href="https://hello.com" style="margin-right: 8px;">Hello</a></li>
-            <li><a href="https://hello.com" style="margin-right: 8px;">Hello</a></li>
-            <li><a href="https://hello.com" style="margin-right: 8px;">Hello</a></li>
-            <li><a href="https://hello.com" style="margin-right: 8px;">Hello</a></li>
-            <li><a href="https://hello.com" style="margin-right: 8px;">Hello</a></li>
-            <li><a href="https://hello.com" style="margin-right: 8px;">Hello</a></li>
-            <li><a href="https://hello.com" style="margin-right: 8px;">Hello</a></li>
+            
 	        </ul>
 	      </div>
     	</nav>
@@ -131,7 +203,7 @@
         <section class="feci" id="fec">
           <div class="navbara">
             <ul>
-              <li>Results</li>
+              <li><a href=""></a>Results</li>
               <li>Gallery</li>
               <li>About</li>
               <li>Home</li>
@@ -170,6 +242,66 @@
         
       </div>
 		</div>
+
+<!---Result Pop Up-->
+    <div id="azans" class="overlay">
+      <div class="popup">
+        <h2>Kullun Kala '23</h2>
+        <a class="close" href="#">&times;</a>
+        <div class="content">
+          <img src="https://hypride.github.io/kullun-kala/images/logob.png" style="width: 100px; height: 100px; display:block; margin-left: auto;margin-right: auto; margin-top: 20px;" >
+          <h5 style="text-align: center; margin-bottom: 20px;">Azan - Bidaya</h5>
+          <div class="container">
+      <div class="row">
+        <div class="col-sm" style="text-align: center;">
+          <img src="https://artoshop.github.io/result/images/1st.png" style="width: 100px; height: 100px;">
+           <h3>Mubarak - Luminar</h3>
+                <p>1st A Grade</p>
+        </div>
+        <div class="col-sm" style="text-align: center;">
+          <img src="https://artoshop.github.io/result/images/2nd.png" style="width: 100px; height: 100px;">
+          <h3>Mishab - Snapseed</h3>
+                <p>2nd B Grade</p>
+        </div>
+        <div class="col-sm" style="text-align: center;">
+          <img src="https://artoshop.github.io/result/images/3rd.png" style="width: 100px; height: 100px;">
+          <h3>Syd Hashir - Snapseed</h3>
+                <p>3rd B Grade</p>
+        </div>
+        
+    <div class="col-sm" style="text-align: center;">
+          <img src="https://artoshop.github.io/result/images/bgrd.png" style="width: 100px; height: 100px;">
+          <h3>Hanan - Picasa</h3>
+                <p>B Grade</p>
+        </div>
+    
+      </div>
+    </div>
+      </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     <script src="js/jquery.min.js"></script>
     <script src="js/popper.js"></script>
