@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="icon" type="image/x-icon" href="images/logo_black.png">
+   <title>Artoshop Gallery</title>
+
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href="style.css">
+<style>
+  /* CSS for the preloader */
+  .preloader {
+       position: fixed;
+       top: 0;
+       left: 0;
+       width: 100%;
+       height: 100%;
+       background: rgba(255, 255, 255, 0.9);
+       display: flex;
+       justify-content: center;
+       align-items: center;
+     }
+
+     /* Center the loading message or spinner within the preloader */
+     .preloader-content {
+       text-align: center;
+     }
+
+     /* CSS to hide the gallery */
+     .gallery {
+       display: none;
+     }
+</style>
+</head>
+<body>
+
+    <div class="preloader">
+      <div class="preloader-content">
+        <h1>Kullun Kala - Image Gallery</h1>
+        <img src="pre.gif" alt="">
+        <p>Loading..... Please Wait</p>
+      </div>
+      </div>
+      <div id="side-menu" class=""></div>   
+
+<div class="gallery">
+
+   <h1 class="heading">image gallery</h1>
+
+   <div class="image-container">
+      
+    <img src="https://artoshop.github.io/gallery/images/135.jpg"  alt="">
+    <img src="https://artoshop.github.io/gallery/images/135.jpg"  alt="">
+    <img src="https://artoshop.github.io/gallery/images/135.jpg"  alt="">
+    <img src="https://artoshop.github.io/gallery/images/135.jpg"  alt="">
+    <img src="https://artoshop.github.io/gallery/images/135.jpg"  alt="">
+    <img src="https://artoshop.github.io/gallery/images/135.jpg"  alt="">
+    <img src="https://artoshop.github.io/gallery/images/135.jpg"  alt="">
+    <img src="https://artoshop.github.io/gallery/images/135.jpg"  alt="">
+      
+      
+   </div>
+
+</div>
+
+<div class="image-popup">
+   <img src="" alt="">
+</div>
+
+
+<script src="script.js"></script>
+<script>
+  // Get all the image elements
+const images = document.querySelectorAll('.image-container img');
+
+// Counter to keep track of loaded images
+let loadedImages = 0;
+
+// Function to show the gallery and hide the preloader
+function showGallery() {
+  const preloader = document.querySelector('.preloader');
+  const gallery = document.querySelector('.gallery');
+  
+  preloader.style.display = 'none';
+  gallery.style.display = 'block';
+}
+
+// Function to check if all images are loaded
+function imageLoaded() {
+  loadedImages++;
+  if (loadedImages === images.length) {
+    showGallery();
+  }
+}
+
+// Add 'load' event listeners to all images
+images.forEach((image) => {
+  image.addEventListener('load', imageLoaded);
+});
+
+// In case an image fails to load, also hide the preloader and show the gallery
+images.forEach((image) => {
+  image.addEventListener('error', imageLoaded);
+});
+
+
+</script>
+
+</body>
+</html>
