@@ -28,12 +28,23 @@
      /* Center the loading message or spinner within the preloader */
      .preloader-content {
        text-align: center;
+       
      }
 
      /* CSS to hide the gallery */
      .gallery {
        display: none;
      }
+     @media (max-width:768px){
+.preloader h1{
+  font-size: 25px;
+}
+.preloader img{
+  width: 210px;
+  height: 80px;
+}
+
+}
 </style>
 </head>
 <body>
@@ -41,9 +52,9 @@
     <div class="preloader">
       <div class="preloader-content">
         <h1>Kullun Kala - Image Gallery</h1>
-        <img src="pre.gif" alt="">
+        <img src="pre.gif" alt="Loading">
         <p>Loading..... Please Wait</p>
-        <p>If it Keeps Loading <a href="https://hypride.github.io/kullun-kala/gallery/">Click Here</a></p>
+        <p>If it Keeps Loading <a href="" onclick="myFunc()">Click Here</a></p>
       </div>
       </div>
       <div id="side-menu" class=""></div>   
@@ -125,6 +136,12 @@ images.forEach((image) => {
 });
 
 
+</script>
+<script>
+  function myFunc() {
+  document.getElementsByClassName("preloader").style.display = "none";
+  document.getElementsByClassName("gallery").innerHTML = "block";
+}
 </script>
 
 </body>
