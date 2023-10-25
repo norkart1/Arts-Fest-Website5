@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
 		
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-		<link rel="stylesheet" href="https://raw.githubusercontent.com/hypride/kullun-kala/main/result/css/style.css">
+		<link rel="stylesheet" href="css/style.css">
     <style>
 ::-webkit-scrollbar {
   width: 0px;
@@ -214,10 +214,11 @@ h3{
           <div class="navbara">
             <ul>
               
-              <li><a href="https://hypride.github.io/kullun-kala/result/">Results</a></li>
-              <li><a href="https://hypride.github.io/kullun-kala/gallery/">Gallery</a></li>
-              <li><a href="https://hypride.github.io/kullun-kala#about">About</a></li>
-              <li><a href="https://hypride.github.io/kullun-kala/">Home</a></li>
+              <li><a href="#" id="loadReuslt">Results</a></li>
+              <li><a href="#" id="loadGallery">Gallery</a></li>
+              <li><a href="#" id="loadAbout">About</a></li>
+              <li><a href="#" id="loadHome">Home</a></li>
+              
             </ul>
             </div>
           <p style="text-align: left; font-size: 20px; color: black; margin: 0px;"><strong>TOPPERS</strong></p>
@@ -340,6 +341,109 @@ h3{
 
 
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      NProgress.configure({ showSpinner: false });
+
+      $(document).ready(function () {
+          $("#loadReuslt").click(function (e) {
+              e.preventDefault(); // Prevent the default behavior of the anchor tag.
+
+              NProgress.start();
+
+              // Create an invisible iframe to load the external website
+              var externalUrl = "https://hypride.github.io/kullun-kala/result/"; // Replace with the URL of the external website
+              var iframe = document.createElement("iframe");
+              iframe.style.display = "none";
+              iframe.src = externalUrl;
+              document.body.appendChild(iframe);
+
+              // Wait for the iframe to load completely
+              iframe.onload = function () {
+                  NProgress.done();
+                  // Redirect to the external website after it's fully loaded
+                  window.location.href = externalUrl;
+              };
+          });
+      });
+  </script>
+  <script>
+    NProgress.configure({ showSpinner: false });
+
+    $(document).ready(function () {
+        $("#loadGallery").click(function (e) {
+            e.preventDefault(); // Prevent the default behavior of the anchor tag.
+
+            NProgress.start();
+
+            // Create an invisible iframe to load the external website
+            var externalUrl = "https://hypride.github.io/kullun-kala/gallery/"; // Replace with the URL of the external website
+            var iframe = document.createElement("iframe");
+            iframe.style.display = "none";
+            iframe.src = externalUrl;
+            document.body.appendChild(iframe);
+
+            // Wait for the iframe to load completely
+            iframe.onload = function () {
+                NProgress.done();
+                // Redirect to the external website after it's fully loaded
+                window.location.href = externalUrl;
+            };
+        });
+    });
+</script>
+<script>
+  NProgress.configure({ showSpinner: false });
+
+  $(document).ready(function () {
+      $("#loadAbout").click(function (e) {
+          e.preventDefault(); // Prevent the default behavior of the anchor tag.
+
+          NProgress.start();
+
+          // Create an invisible iframe to load the external website
+          var externalUrl = "https://hypride.github.io/kullun-kala/#about"; // Replace with the URL of the external website
+          var iframe = document.createElement("iframe");
+          iframe.style.display = "none";
+          iframe.src = externalUrl;
+          document.body.appendChild(iframe);
+
+          // Wait for the iframe to load completely
+          iframe.onload = function () {
+              NProgress.done();
+              // Redirect to the external website after it's fully loaded
+              window.location.href = externalUrl;
+          };
+      });
+  });
+</script>
+<script>
+  NProgress.configure({ showSpinner: false });
+
+  $(document).ready(function () {
+      $("#loadHome").click(function (e) {
+          e.preventDefault(); // Prevent the default behavior of the anchor tag.
+
+          NProgress.start();
+
+          // Create an invisible iframe to load the external website
+          var externalUrl = "https://hypride.github.io/kullun-kala/"; // Replace with the URL of the external website
+          var iframe = document.createElement("iframe");
+          iframe.style.display = "none";
+          iframe.src = externalUrl;
+          document.body.appendChild(iframe);
+
+          // Wait for the iframe to load completely
+          iframe.onload = function () {
+              NProgress.done();
+              // Redirect to the external website after it's fully loaded
+              window.location.href = externalUrl;
+          };
+      });
+  });
+</script>
 
 
 
@@ -353,12 +457,10 @@ h3{
 
 
 
-
-
-    <script src="https://github.com/hypride/kullun-kala/raw/main/result/js/bootstrap.min.js"></script>
-    <script src="https://github.com/hypride/kullun-kala/raw/main/result/js/jquery.min.js"></script>
-    <script src="https://github.com/hypride/kullun-kala/raw/main/result/js/main.js"></script>
-    <script src="https://github.com/hypride/kullun-kala/raw/main/result/js/popper.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/popper.js"></script>
     <script>
       function myFunction() {
     var input, filter, ul, li, a, i, txtValue;
