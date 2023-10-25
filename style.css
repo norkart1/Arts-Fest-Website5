@@ -63,7 +63,7 @@ html {
         transform: translateY(0);
     }
     50% {
-        transform: translateY(-5px); /* Adjust the distance and direction */
+        transform: translateY(-12px); /* Adjust the distance and direction */
     }
     100% {
         transform: translateY(0);
@@ -79,7 +79,7 @@ html {
       transform: translateY(0);
   }
   50% {
-      transform: translateY(5px); /* Adjust the distance and direction */
+      transform: translateY(12px); /* Adjust the distance and direction */
   }
   100% {
       transform: translateY(0);
