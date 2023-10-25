@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Include NProgress CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.css">
+</head>
+<body>
+    <a id="loadExternalWebsite">Load External Website</a>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.js"></script>
+
+    <script>
+        NProgress.configure({ showSpinner: false });
+
+        $(document).ready(function () {
+            $("#loadExternalWebsite").click(function (e) {
+                e.preventDefault(); // Prevent the default behavior of the anchor tag.
+
+                NProgress.start();
+
+                // Create an invisible iframe to load the external website
+                var externalUrl = "https://artoshop.github.io/gallery/"; // Replace with the URL of the external website
+                var iframe = document.createElement("iframe");
+                iframe.style.display = "none";
+                iframe.src = externalUrl;
+                document.body.appendChild(iframe);
+
+                // Wait for the iframe to load completely
+                iframe.onload = function () {
+                    NProgress.done();
+                    // Redirect to the external website after it's fully loaded
+                    window.location.href = externalUrl;
+                };
+            });
+        });
+    </script>
+</body>
+</html>

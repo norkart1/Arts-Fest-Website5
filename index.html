@@ -222,7 +222,7 @@
           <section class="feci" id="fec">
             <div class="row">
                 <div class="feci-col flick_can">
-                  <a href="/result/" style="text-decoration: dashed;">
+                  <a id="loadReuslt" href="#" style="text-decoration: dashed;">
                     <div class="sufaid1" style="background-color: #ffbd00; ">
                       <img src="images/poll.svg" alt="">
                       <h1 style="font-family: myFirstFont; color: black;">Leader Board</h1>
@@ -230,7 +230,7 @@
                   </a>
                 </div>
                 <div class="feci-col flick_lum">
-                  <a href="/gallery/" style="text-decoration: dashed;">
+                  <a id="loadGallery" href="#" style="text-decoration: dashed;">
                   <div class="sufaid1" style="background-color: #ffbd00;">
                     <img src="images/gall.svg" alt="">
                     <h1 style="font-family: myFirstFont; color: black;">Image Gallery</h1>
@@ -503,6 +503,59 @@
         firebase.initializeApp(firebaseConfig);
         firebase.analytics();
     </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      NProgress.configure({ showSpinner: false });
+
+      $(document).ready(function () {
+          $("#loadReuslt").click(function (e) {
+              e.preventDefault(); // Prevent the default behavior of the anchor tag.
+
+              NProgress.start();
+
+              // Create an invisible iframe to load the external website
+              var externalUrl = "https://hypride.github.io/kullun-kala/result/"; // Replace with the URL of the external website
+              var iframe = document.createElement("iframe");
+              iframe.style.display = "none";
+              iframe.src = externalUrl;
+              document.body.appendChild(iframe);
+
+              // Wait for the iframe to load completely
+              iframe.onload = function () {
+                  NProgress.done();
+                  // Redirect to the external website after it's fully loaded
+                  window.location.href = externalUrl;
+              };
+          });
+      });
+  </script>
+  <script>
+    NProgress.configure({ showSpinner: false });
+
+    $(document).ready(function () {
+        $("#loadGallery").click(function (e) {
+            e.preventDefault(); // Prevent the default behavior of the anchor tag.
+
+            NProgress.start();
+
+            // Create an invisible iframe to load the external website
+            var externalUrl = "https://hypride.github.io/kullun-kala/gallery/"; // Replace with the URL of the external website
+            var iframe = document.createElement("iframe");
+            iframe.style.display = "none";
+            iframe.src = externalUrl;
+            document.body.appendChild(iframe);
+
+            // Wait for the iframe to load completely
+            iframe.onload = function () {
+                NProgress.done();
+                // Redirect to the external website after it's fully loaded
+                window.location.href = externalUrl;
+            };
+        });
+    });
+</script>
       
     <script src="https://kit.fontawesome.com/83fe534cf6.js" crossorigin="anonymous"></script>
     <!-- End of bodyEnd -->
