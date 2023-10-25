@@ -62,16 +62,13 @@ body{
 }
 
 .gallery{
-   padding:20px;
+   padding: 20px;
    text-align: center;
-   padding-left: px;
 }
 
 .gallery .image-container{
    gap:15px;
    columns:3 350px;
-   margin-right: 50px;
-   margin-left: 50px;
 }
 
 .gallery .image-container img{
@@ -96,13 +93,14 @@ body{
 }
 
 .gallery .image-container img:hover{
-   transform: scale(.95);
+   transform: scale(.97);
 }
 
 
 .image-popup{
    position: fixed;
-   top:0; left:0;
+   top:0; 
+   left:0;
    z-index: 1200;
    background-color: var(--dark-bg);
    height: 100vh;
@@ -127,9 +125,6 @@ body{
 
 @media (max-width:1200px){
 
-   .gallery{
-      padding-left: 20px;
-   }
    .heading{
     font-size: 50px;
    }
