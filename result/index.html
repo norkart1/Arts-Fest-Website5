@@ -363,36 +363,98 @@ h3{
       </div>
           
       </section>
-      <div class="forshadow2" style="margin-top: 20px;">
-        <h6 style="color: black;"><strong><i>TODAY'S PROGRAMMES LIST</i></strong></h6>
-        <ul class="list-unstyled components mb-5" id="myUL">
-          <li><a>SPEECH MLM - Bidaya</a></li>
-<li><a>SONG ARB - Bidaya</a></li>
-<li><a>SPEECH ENG - Bidaya</a></li>
-<li><a>SPEECH ARB - Bidaya</a></li>
-<li><a>SONG URD - Bidaya</a></li>
-<li><a>SONG ENG - Bidaya</a></li>
-<li><a>SPEECH ENG -Ula</a></li>
+      
 
-          
-        </ul>
+      <div class="forshadow2"  style="margin-top: 10px;">
+        <h6 style="color: black;"><strong><i>INDIVIDUAL TOP SCORERS</i></strong></h6>
+        <label for="dropdown">Select an option:</label>
+    <select id="dropdown" onchange="toggleDiv()">
+      <option value="">Select A Catogory</option>
+        <option value="option1">Bidaya</option>
+        <option value="option2">Ula</option>
+        <option value="option3">Thaniya</option>
+        <option value="option4">Thanawiyya</option>
+        <option value="option5">Aliya</option>
+       
+    </select>
+
+    
+<!--
+    <div id="div1" style="display: none; ">
+      <div style="margin: auto; width: 80%; text-align: center; align-items: center; margin-top: 15px;">
+       <img src="https://sm.ign.com/ign_nordic/cover/a/avatar-gen/avatar-generations_prsz.jpg" style="width: 80px; height: 80px; ">
+      <strong><h1 style="font-size: 25px;"><b>Rayyan - Mosaic</b></h1></strong>
+      <p style="margin-top: -17px;">Points : 49</p>
+    </div>
       </div>
-
-      <div class="forshadow2"  style="margin-top: 30px;">
-        <h6 style="color: black;"><strong><i>INDIVIDUAL TOP SCORER</i></strong></h6>
-        <ul class="list-unstyled components mb-5" id="myUL">
-          
-          
-        </ul>
+      <div id="div2" style="display: none; ">
+        <div style="margin: auto; width: 80%; text-align: center; align-items: center; margin-top: 15px;">
+         <img src="https://sm.ign.com/ign_nordic/cover/a/avatar-gen/avatar-generations_prsz.jpg" style="width: 80px; height: 80px; ">
+        <strong><h1 style="font-size: 25px;"><b>Abdurahman - Frescose</b></h1></strong>
+        <p style="margin-top: -17px;">Points : 49</p>
       </div>
+        </div>
+        <div id="div3" style="display: none; ">
+          <div style="margin: auto; width: 80%; text-align: center; align-items: center; margin-top: 15px;">
+           <img src="https://sm.ign.com/ign_nordic/cover/a/avatar-gen/avatar-generations_prsz.jpg" style="width: 80px; height: 80px; ">
+          <strong><h1 style="font-size: 25px;"><b>Mishab - Bonsai</b></h1></strong>
+          <p style="margin-top: -17px;">Points : 49</p>
+        </div>
+          </div>
+          <div id="div4" style="display: none; ">
+            <div style="margin: auto; width: 80%; text-align: center; align-items: center; margin-top: 15px;">
+             <img src="https://sm.ign.com/ign_nordic/cover/a/avatar-gen/avatar-generations_prsz.jpg" style="width: 80px; height: 80px; ">
+            <strong><h1 style="font-size: 25px;"><b>Sinan Cp - Iznik</b></h1></strong>
+            <p style="margin-top: -17px;">Points : 49</p>
+          </div>
+            </div>
+            <div id="div5" style="display: none; ">
+              <div style="margin: auto; width: 80%; text-align: center; align-items: center; margin-top: 15px;">
+               <img src="https://sm.ign.com/ign_nordic/cover/a/avatar-gen/avatar-generations_prsz.jpg" style="width: 80px; height: 80px; ">
+              <strong><h1 style="font-size: 25px;"><b>Faraz - Bonsai</b></h1></strong>
+              <p style="margin-top: -17px;">Points : 49</p>
+            </div>
+              </div>
 
-
+  
+-->
 
 
         
       </div>
 		</div>
+    <script>
+      function toggleDiv() {
+          var select = document.getElementById("dropdown");
+          var selectedOption = select.options[select.selectedIndex].value;
+          
+          var div1 = document.getElementById("div1");
+          var div2 = document.getElementById("div2");
+          var div3 = document.getElementById("div3");
+          var div4 = document.getElementById("div4");
+          var div5 = document.getElementById("div5");
+          
 
+          div1.style.display = "none";
+          div2.style.display = "none";
+          div3.style.display = "none";
+          div4.style.display = "none";
+          div5.style.display = "none";
+          
+
+          if (selectedOption === "option1") {
+              div1.style.display = "block";
+          } else if (selectedOption === "option2") {
+              div2.style.display = "block";
+          } else if (selectedOption === "option3") {
+              div3.style.display = "block";
+          } else if (selectedOption === "option4") {
+              div4.style.display = "block";
+          } else if (selectedOption === "option5") {
+              div5.style.display = "block";
+          } 
+      }
+  </script>
 <!---Result Pop Up-->
  
 
